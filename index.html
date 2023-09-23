@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar"> 
+            <div class="nav"> 
+               <div class="nav-option" style="opacity: 1">
+                 <i class="fa-solid fa-house"></i>
+                 <a href="#">Home</a>
+               </div> 
+               <div class="nav-option" > 
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                 <a href="#">Search</a>
+               </div>
+            </div>   
+            <div class="library">
+                <div class="options"> 
+                  <div class="lib-options nav-option">
+                    <img src="library_icon.png" alt="l">
+                    <a href="#">Your Libraries</a>
+                  </div>
+                  <div class="icons"> 
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+                <div class="lib-box"> 
+                   <div class="box">
+                       <p class="box-p1"> Create your first playlist</p>
+                       <p class="box-p2"> It's easy we'll help you</p>
+                       <button class="badge">Create playlist</button>
+                   </div>
+                   <div class="box">
+                    <p class="box-p1"> Let's find some podcasts to follow</p>
+                    <p class="box-p2"> We'll keep you updated on new episodes</p>
+                    <button class="badge">Brows podcasts</button>
+                </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="main-cont"> 
+            <div class="sticky-nav">
+                <div class="sticky-nav-icons">
+                    <img src="backward_icon.png" alt="m">
+                    <img src="forward_icon.png" alt="m" class="hide">
+                </div>
+                <div class="sticky-nav-options">
+                    <button class="badge hide">Explore Premium</button>
+                    <button class="badge ip"> <i class="fa-regular fa-circle-down" style="padding-left:1rem;" ></i> Install App </button>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                
+            </div>
+             
+            <h2 >Recently Played</h2>
+            <div class="card-container">
+                <div class="card"> 
+                    <img src="card1img.jpeg" alt="c1" class="card-img">
+                    <p class="card-title"> Top 51 - Global</p>
+                    <p class="card-para">Your daily updates of the most played tracks ...</p>
+               </div>
+              
+            </div>
+
+            <h2 >Treanding Now Near You</h2>
+            <div class="card-container">
+                <div class="card"> 
+                    <img src="card2img.jpeg" alt="c1" class="card-img">
+                    <p class="card-title"> Mahiye Jinna Sohna</p>
+                    <p class="card-para">Click for more from <BR></BR> ~ DARSHAN RAWAL...</p>
+                </div>
+                <div class="card"> 
+                  <img src="card3img.jpeg" alt="c1" class="card-img">
+                  <p class="card-title"> Mera Pass Tum Ho</p>
+                  <p class="card-para"> <strong>MOST PLAYED</strong> song from your playlist ...</p>
+                </div>
+                <div class="card"> 
+                   <img src="https://i1.sndcdn.com/artworks-7YJlJUrjYS4Cmgbn-SbFLFg-t500x500.jpg" alt="c1" class="card-img">
+                   <p class="card-title"> Downers at dusk</p> 
+                   <p class="card-para">~ Talha Anjum &hearts;</p>
+                   <p class="card-para"> <strong>MOST PLAYED</strong> in your playlist "HEART"</p>
+                </div>
+                <div class="card"> 
+                    <img src="data:image/jpeg;base64,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" alt="c1" class="card-img">
+                    <p class="card-title"> Farq Hai</p>
+                    <p class="card-para">Suzonn...</p>
+                    <p class="card-para">#TRENDINGAT100</p>
+                </div>
+                <div class="card"> 
+                     <img src="card4img.jpeg" alt="c1" class="card-img">
+                     <p class="card-title"> NAA Ready</p>
+                     <p class="card-para">Click For More</p>
+                </div>
+                <div class="card"> 
+                    <img src="https://cdns-images.dzcdn.net/images/cover/c5acd4238969e7589fe678530302ed11/264x264.jpg" alt="c1" class="card-img">
+                    <p class="card-title"> Dhundhala</p>
+                    <p class="card-para">One of the most trending song of talwiinder...</p>
+                </div>
+                <div class="card"> 
+                  <img src="https://pagalworld.cool/siteuploads/thumb/sft3/1019_resize2x_250x250.webp" alt="c1" class="card-img">
+                  <p class="card-title">Laado</p>
+                  <p class="card-para">Click for more from MC Square ...</p>
+                </div>
+            </div>
+           
+            <h2>Featured Charts</h2>
+            <div class="card-container">
+                <div class="card"> 
+                        <img src="card5img.jpeg" alt="c1" class="card-img">
+                        <p class="card-title"> Top 51 - Global</p>
+                        <p class="card-para">Your daily updates of the most played tracks ...</p>
+                </div>
+                <div class="card"> 
+                       <img src="card6img.jpeg" alt="c1" class="card-img">
+                       <p class="card-title"> Top 51 - Global</p>
+                       <p class="card-para">Your daily updates of the most played tracks ...</p>
+                </div>
+                <div class="card"> 
+                       <img src="card1img.jpeg" alt="c1" class="card-img">
+                       <p class="card-title"> Top 51 - Global</p>
+                       <p class="card-para">Your daily updates of the most played tracks ...</p>
+                </div>
+                  
+            </div>
+                
+              
+            </div>
+       
+
+        </div>
+        <div class="footer"> 
+            <div class="line"></div>
+    </div>
+        <div class="music-player"> 
+           <div class="album"></div>
+           <div class="player">
+             <div class="player-control">
+               <img src="player_icon1.png" alt="a" class="player-control-icon">
+               <img src="player_icon2.png" alt="a" class="player-control-icon">
+               <img src="player_icon3.png" alt="a" class="player-control-icon" style="opacity: 1; height: 2.1rem; width: 2.1rem;">
+               <img src="player_icon4.png" alt="a" class="player-control-icon">
+               <img src="player_icon5.png" alt="a" class="player-control-icon">
+             </div>
+             <div class="playback-bar"> 
+                <span class="current-time">00:00</span>
+                <input type="range" min="0" max="100" step="1" class="progress-bar" >
+                <span class="total-time">3:33</span>
+             </div>
+           </div>
+           <div class="control"></div>
+    </div>
+</body>
+</html>
