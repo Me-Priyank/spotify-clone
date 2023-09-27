@@ -261,6 +261,7 @@ span{
     width: 3.2rem;
     border-radius: 5px;
     margin-left: 0.7rem;
+    transition: 0.1;
 }
 .album-title{
     font-size: 0.9rem;
@@ -345,4 +346,7 @@ span{
 .fa-pen-to-square:hover{
 opacity: 1;
 cursor: pointer;
+}
+.album-picc:hover{
+    box-shadow: 0 0 8px #1bd760 ;
 }
